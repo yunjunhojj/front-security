@@ -13,3 +13,6 @@
 3. package.json 에서 express 확인
 
 server.js 파일 생성 후 코드 입력
+html 파일 추가
+
+- node server.js 로 서버 실행

@@ -2,7 +2,14 @@ const express = require("express");
 const router = express.Router();
 
 router.get("/", (req, res) => {
-  res.send({ message: "Hello World!" });
+  res.setHeader("X-TimeStamp", Date.now());
+  let message = req.query.message;
+
+  if (req.query.message === "") {
+    res.status(400);
+    message = "No message provided";
+  }
+  res.send({ message });
 });
 
 router.use(express.json());
