@@ -29,3 +29,5 @@ iframe을 사용해서 피싱 사이트를 만들어서 개인정보를 탈취�
 
 - <script>, <link>, <img>, <video>, <embed>, @font-face
   위의 경우에는 cors와 cross orgin 속성을 사용하여 접근을 제한할 수 있다.
+
+## 동일 출처 정책
