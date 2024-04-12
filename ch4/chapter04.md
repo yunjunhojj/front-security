@@ -29,3 +29,14 @@ iframe을 사용해서 피싱 사이트를 만들어서 개인정보를 탈취�
 
 - <script>, <link>, <img>, <video>, <embed>, @font-face
   위의 경우에는 cors와 cross orgin 속성을 사용하여 접근을 제한할 수 있다.
+
+## preflight
+
+서버로 바로 요청을 보내는 Simple Request와는 다르게, 지금 보내는 요청이 유효한지를 확인하기 위해 OPTIONS 메서드로 예비 요청을 보내는 것이다.
+
+- Content-Type이 다음과 같은 GET, HEAD, POST 요청
+  - application/x-www-form-urlencoded
+  - multipart/form-data
+  - text/plain
+- 요청에 사용된 XMLHttpRequest.upload 객체에 이벤트 리스너가 등록되어 있지 않을 때
+- ReadableStream 객체가 요청에서 사용되지 않을 때
