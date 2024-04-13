@@ -23,6 +23,7 @@ router.get("/", (req, res) => {
 router.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
   if (req.method === "OPTIONS") {
+    console.log("Pre-flight request");
     res.header("Access-Control-Allow-Headers", "X-Token");
   }
   next();
